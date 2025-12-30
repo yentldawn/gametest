@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/cloudy-day.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: #333;
+}
+
+.buttons button {
+  font-size: 16px;
+  margin: 5px;
+}
+
+#result {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#score {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Style for the big X when the computer wins */
+.computer-wins::after {
+  content: 'X';
+  color: red;
+  font-size: 100px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  display: none; /* Hidden by default */
+}
