@@ -9,6 +9,7 @@ function play(userChoice) {
 
   if (userChoice === computerChoice) {
     result = "It's a tie!";
+    document.querySelector('.computer-wins').style.display = 'none';
   } else if (
     (userChoice === 'rock' && computerChoice === 'scissors') ||
     (userChoice === 'paper' && computerChoice === 'rock') ||
@@ -16,9 +17,11 @@ function play(userChoice) {
   ) {
     result = `You win! Computer chose ${computerChoice}.`;
     playerScore++;
+    document.querySelector('.computer-wins').style.display = 'none';
   } else {
     result = `You lose! Computer chose ${computerChoice}.`;
     computerScore++;
+    document.querySelector('.computer-wins').style.display = 'block';
   }
 
   document.getElementById('result').innerText = result;
